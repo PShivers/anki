@@ -1,0 +1,20 @@
+What is the order of SQL clause execution?	FROM → JOIN → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → LIMIT
+What is the difference between INNER JOIN and LEFT JOIN?	INNER JOIN: returns only rows with matches in both tables.<br>LEFT JOIN: returns all rows from the left table and matching rows from the right; NULLs where there's no match.
+What is a FULL OUTER JOIN?	Returns all rows from both tables. Where there's no match on either side, the missing columns are filled with NULL.
+What is the difference between WHERE and HAVING?	WHERE filters individual rows before grouping.<br>HAVING filters aggregated groups after GROUP BY. HAVING can use aggregate functions; WHERE cannot.
+What does GROUP BY do?	Collapses rows with the same value in the specified column(s) into a single row, allowing aggregate functions (COUNT, SUM, AVG, MAX, MIN) to be applied per group.
+What is a subquery?	A query nested inside another query. Can appear in SELECT, FROM, or WHERE clauses. Correlated subqueries reference the outer query and run once per outer row.
+What is a CTE (Common Table Expression)?	A named temporary result defined with WITH clause before the main query. Improves readability and can be referenced multiple times. Recursive CTEs can traverse hierarchies.
+What is a window function?	Performs a calculation across a set of rows related to the current row without collapsing them. Uses OVER(PARTITION BY ... ORDER BY ...). Examples: ROW_NUMBER(), RANK(), LAG(), LEAD(), SUM().
+What is the difference between RANK() and DENSE_RANK()?	RANK(): assigns the same rank to ties but skips the next rank(s) — 1,1,3.<br>DENSE_RANK(): assigns the same rank to ties without gaps — 1,1,2.
+What does ROW_NUMBER() do?	Assigns a unique sequential integer to each row within a partition, ordered by the specified ORDER BY. No ties — each row gets a distinct number.
+What is the difference between UNION and UNION ALL?	UNION: combines result sets and removes duplicate rows.<br>UNION ALL: combines result sets keeping all duplicates. UNION ALL is faster as it skips deduplication.
+What does DISTINCT do?	Removes duplicate rows from the result set. SELECT DISTINCT col returns only unique values for that column.
+What is an index and how does it affect queries?	A B-tree (or other) structure that speeds up lookups on a column. Speeds up SELECT with WHERE/ORDER BY but slows INSERT/UPDATE/DELETE due to index maintenance.
+What is the difference between DELETE, TRUNCATE, and DROP?	DELETE: removes specific rows — can be rolled back, fires triggers, slower.<br>TRUNCATE: removes all rows fast — minimal logging, usually not rollback-able.<br>DROP: removes the entire table structure and data.
+What is a NULL in SQL and how do you test for it?	NULL represents an unknown or missing value. Use IS NULL or IS NOT NULL — never = NULL, as NULL = NULL evaluates to NULL (unknown), not true.
+What does COALESCE do?	Returns the first non-NULL value from a list of arguments. COALESCE(a, b, c) returns a if not null, else b, else c. Useful for providing defaults.
+What is a self join?	A join of a table with itself. Used to compare rows within the same table or traverse hierarchical data (e.g., employee and manager in the same table).
+What does EXPLAIN (or EXPLAIN ANALYZE) do?	Shows the query execution plan — how the database will (or did) execute the query, including index usage, join strategies, and estimated/actual row counts. Essential for performance tuning.
+What is a transaction and how do you use it in SQL?	A block of statements executed atomically: BEGIN; ... COMMIT; or ROLLBACK; if something fails. Ensures ACID properties across multiple statements.
+What is the difference between a correlated and non-correlated subquery?	Non-correlated: the subquery runs once independently and its result is used by the outer query.<br>Correlated: the subquery references the outer query and runs once for each outer row — can be slow.

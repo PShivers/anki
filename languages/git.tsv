@@ -1,0 +1,20 @@
+What does git init do?	Initializes a new Git repository in the current directory, creating a hidden .git folder to track history.
+What is the difference between git fetch and git pull?	git fetch: downloads remote changes but does not merge them into your working branch.<br>git pull: fetches and immediately merges (or rebases) the remote changes into the current branch.
+What is the difference between git merge and git rebase?	merge: creates a new merge commit combining two branches — preserves full history.<br>rebase: replays your commits on top of another branch — produces a linear history but rewrites commits.
+What does git stash do?	Temporarily saves uncommitted changes (staged and unstaged) so you can switch branches or pull without committing. Restore with git stash pop or git stash apply.
+What is a detached HEAD state?	When HEAD points directly to a commit instead of a branch. Commits made in this state are not on any branch and can be lost unless a new branch is created.
+What does git reset do?	Moves the current branch pointer to a specified commit.<br>--soft: keeps changes staged.<br>--mixed (default): unstages changes.<br>--hard: discards all changes permanently.
+What is the difference between git reset and git revert?	git reset: rewrites history by moving the branch pointer — unsafe on shared branches.<br>git revert: creates a new commit that undoes a previous commit — safe for shared branches.
+What does git cherry-pick do?	Applies the changes from a specific commit onto the current branch, creating a new commit with the same changes but a different hash.
+What is a fast-forward merge?	When the target branch has no new commits since the feature branch diverged, Git simply moves the branch pointer forward — no merge commit is created.
+What does git reflog do?	Records every change to HEAD, including resets and branch switches. Useful for recovering commits that appear lost after a reset or rebase.
+What is a Git tag?	A named reference to a specific commit. Lightweight tags are just pointers; annotated tags store a message and tagger info. Used to mark release versions (e.g., v1.0.0).
+What does git bisect do?	Performs a binary search through commit history to find the commit that introduced a bug. You mark commits as good or bad; git bisect narrows down to the offending commit.
+What is the staging area (index)?	An intermediate area between the working directory and the repository. git add moves changes to the staging area; git commit records staged changes into history.
+What does git diff do?	Shows differences between working directory and staging area (git diff), staged changes vs last commit (git diff --cached), or between two commits/branches.
+What is a .gitignore file?	A file specifying patterns for files and directories Git should not track. Patterns are matched against file paths relative to the .gitignore location.
+What does git log --oneline --graph do?	Displays commit history as a compact one-line-per-commit ASCII graph showing branch and merge structure.
+What is the difference between origin and upstream?	origin: your fork or primary remote (default name after git clone).<br>upstream: the original repository your fork was created from. Convention, not enforced by Git.
+What does git remote -v show?	Lists all configured remote repositories and their fetch/push URLs.
+What is an interactive rebase (git rebase -i)?	Lets you edit, squash, reorder, or drop commits in a range before they are applied. Useful for cleaning up history before merging a feature branch.
+What does git blame do?	Shows the commit and author that last modified each line of a file. Useful for understanding why code was written a certain way.

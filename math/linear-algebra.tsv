@@ -1,0 +1,20 @@
+What is a vector?	An ordered list of numbers representing a point or direction in n-dimensional space. In ML, feature vectors represent data samples.
+What is a matrix?	A 2D array of numbers with m rows and n columns, written as an m×n matrix. Used to represent linear transformations and datasets.
+What is matrix multiplication?	C = AB where C[i][j] = dot product of row i of A and column j of B. Requires A to be m×n and B to be n×p; result is m×p. Not commutative.
+What is the dot product of two vectors?	a · b = Σ aᵢbᵢ = |a||b|cos(θ). Measures the projection of one vector onto another. Zero means the vectors are orthogonal.
+What is the transpose of a matrix?	Aᵀ where rows and columns are swapped: Aᵀ[i][j] = A[j][i]. (AB)ᵀ = BᵀAᵀ.
+What is the identity matrix?	A square matrix with 1s on the diagonal and 0s elsewhere. AI = IA = A for any compatible matrix A.
+What is the inverse of a matrix?	A⁻¹ such that AA⁻¹ = A⁻¹A = I. Only square matrices with non-zero determinant are invertible. Used to solve systems of linear equations: x = A⁻¹b.
+What is the determinant of a matrix?	A scalar value computed from a square matrix. det(A) ≠ 0 means A is invertible. For 2×2: det([[a,b],[c,d]]) = ad − bc.
+What is a system of linear equations?	A set of equations Ax = b where A is the coefficient matrix, x is the unknown vector, and b is the result vector. Solved via Gaussian elimination, matrix inverse, or LU decomposition.
+What is an eigenvalue and eigenvector?	For matrix A, eigenvector v satisfies Av = λv where λ is the eigenvalue. The matrix stretches/shrinks v by factor λ without changing its direction.
+What is the rank of a matrix?	The number of linearly independent rows (or columns). Equal to the dimension of the column space. rank(A) < min(m,n) means the matrix is rank-deficient.
+What is linear independence?	A set of vectors is linearly independent if no vector can be written as a linear combination of the others. Equivalently, the only solution to c₁v₁ + ... + cₙvₙ = 0 is all cᵢ = 0.
+What is a vector space?	A set of vectors closed under addition and scalar multiplication, satisfying 8 axioms. Examples: ℝⁿ, the set of polynomials of degree ≤ n.
+What is a basis?	A set of linearly independent vectors that spans a vector space. Every vector in the space can be uniquely expressed as a linear combination of basis vectors.
+What is the norm (magnitude) of a vector?	The length of a vector. L2 norm: |v| = √(Σ vᵢ²). L1 norm: Σ|vᵢ|. Used for distances and normalizing vectors.
+What is cosine similarity?	Measures the angle between two vectors: cos(θ) = (a · b) / (|a||b|). 1 = same direction, 0 = orthogonal, −1 = opposite. Used in NLP to compare document/word vectors.
+What is PCA (Principal Component Analysis)?	A dimensionality reduction technique that finds the directions (principal components) of maximum variance in data using eigenvectors of the covariance matrix.
+What is SVD (Singular Value Decomposition)?	Decomposes matrix A into A = UΣVᵀ where U and V are orthogonal matrices and Σ is diagonal with singular values. Used in PCA, recommendation systems, and data compression.
+What is a linear transformation?	A function T: V → W between vector spaces satisfying T(u + v) = T(u) + T(v) and T(cv) = cT(v). Every linear transformation can be represented as matrix multiplication.
+What is the column space (image) of a matrix?	The set of all vectors b for which Ax = b has a solution — i.e., all possible outputs of the linear transformation. Its dimension is the rank of A.

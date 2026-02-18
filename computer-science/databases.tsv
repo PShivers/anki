@@ -1,0 +1,20 @@
+What is a relational database?	A database that organizes data into tables (relations) with rows and columns. Relationships between tables are expressed via foreign keys. Uses SQL.
+What is a primary key?	A column (or combination of columns) that uniquely identifies each row in a table. Cannot be NULL and must be unique.
+What is a foreign key?	A column in one table that references the primary key of another table, enforcing referential integrity between related tables.
+What is normalization?	The process of organizing a database schema to reduce data redundancy and improve integrity. Each normal form (1NF–BCNF) eliminates specific types of anomalies.
+What is 1NF (First Normal Form)?	Every column contains atomic (indivisible) values, and each row is unique. No repeating groups or arrays within a column.
+What is 2NF (Second Normal Form)?	In 1NF, and every non-key attribute is fully functionally dependent on the entire primary key (no partial dependencies).
+What is 3NF (Third Normal Form)?	In 2NF, and no non-key attribute is transitively dependent on the primary key (non-key attributes depend only on the key).
+What is an index?	A data structure (commonly a B-tree) that speeds up row lookups on a column at the cost of extra storage and slower writes.
+What is the difference between a clustered and non-clustered index?	Clustered: rows are physically stored in index order — one per table, fastest for range queries.<br>Non-clustered: a separate structure pointing to rows — multiple allowed, adds a lookup step.
+What is a transaction?	A unit of work that is executed atomically. Either all operations succeed and are committed, or all are rolled back if any fail.
+What are the ACID properties?	Atomicity — all or nothing.<br>Consistency — database moves from one valid state to another.<br>Isolation — concurrent transactions don't interfere.<br>Durability — committed changes survive crashes.
+What is the difference between optimistic and pessimistic locking?	Pessimistic: lock the resource before reading/writing to prevent conflicts.<br>Optimistic: read without locking, check for conflicts at commit time and retry if needed.
+What are the SQL transaction isolation levels?	Read Uncommitted → Read Committed → Repeatable Read → Serializable. Higher levels prevent more anomalies (dirty reads, non-repeatable reads, phantom reads) at the cost of concurrency.
+What is a JOIN in SQL?	Combines rows from two or more tables based on a related column. Types: INNER JOIN (matching rows only), LEFT/RIGHT JOIN (all rows from one side), FULL OUTER JOIN (all rows from both).
+What is the difference between WHERE and HAVING?	WHERE filters rows before aggregation; HAVING filters groups after GROUP BY aggregation.
+What is a view?	A virtual table defined by a stored query. Simplifies complex queries and can restrict column/row access without duplicating data.
+What is a stored procedure?	A named, precompiled SQL routine stored in the database. Accepts parameters, can contain logic, and is called by name to reduce repetitive SQL.
+What is the N+1 query problem?	When fetching N records and then issuing one additional query per record to load related data, causing N+1 total queries. Fixed with eager loading (JOIN or IN clause).
+What is the CAP theorem?	In a distributed system, you can only guarantee two of three: Consistency (all nodes see the same data), Availability (every request gets a response), Partition tolerance (system works despite network splits).
+What is the difference between SQL and NoSQL databases?	SQL: structured, relational, ACID, fixed schema. Best for complex queries and relations.<br>NoSQL: flexible schema, horizontal scaling, various models (document, key-value, column, graph). Best for high throughput and unstructured data.

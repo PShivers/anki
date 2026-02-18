@@ -1,0 +1,20 @@
+What is a set?	An unordered collection of distinct elements. Notation: {1, 2, 3}. Key operations: union (∪), intersection (∩), difference (−), complement (Aᶜ).
+What is the difference between a set and a multiset?	A set contains each element at most once. A multiset (bag) allows duplicate elements.
+What is the Cartesian product A × B?	The set of all ordered pairs (a, b) where a ∈ A and b ∈ B. |A × B| = |A| × |B|.
+What is a relation?	A subset of the Cartesian product A × B. A binary relation on A is a subset of A × A. Generalizes concepts like "less than" or "is a friend of."
+What is an equivalence relation?	A relation that is reflexive (a R a), symmetric (a R b → b R a), and transitive (a R b ∧ b R c → a R c). Partitions a set into equivalence classes.
+What is a partial order?	A relation that is reflexive, antisymmetric (a R b ∧ b R a → a = b), and transitive. Example: ≤ on integers, ⊆ on sets.
+What is a function (in discrete math)?	A relation where each element of the domain maps to exactly one element of the codomain. f: A → B. Properties: injective (one-to-one), surjective (onto), bijective (both).
+What is the difference between injective, surjective, and bijective?	Injective (one-to-one): distinct inputs map to distinct outputs.<br>Surjective (onto): every output has at least one input.<br>Bijective: both — a perfect one-to-one correspondence.
+What is the Pigeonhole Principle?	If n+1 items are placed into n containers, at least one container holds 2 or more items. Generalized: if kn+1 items into n containers, some container holds ≥ k+1 items.
+What is a permutation?	An ordered arrangement of r items from n distinct items. P(n, r) = n! / (n−r)!. Order matters.
+What is a combination?	An unordered selection of r items from n distinct items. C(n, r) = n! / (r! × (n−r)!). Order does not matter.
+What is Pascal's Triangle and its relation to combinations?	Each entry is C(n, k). Each value is the sum of the two values above it. The nth row gives the coefficients of the binomial expansion (a + b)ⁿ.
+What is the Binomial Theorem?	(a + b)ⁿ = Σ C(n,k) aᵏ bⁿ⁻ᵏ for k=0 to n. The coefficients C(n,k) are binomial coefficients.
+What is a graph in discrete math?	G = (V, E) where V is a set of vertices and E is a set of edges (pairs of vertices). Can be directed or undirected, weighted or unweighted.
+What is a tree in graph theory?	A connected, acyclic undirected graph with |E| = |V| − 1. A rooted tree has one designated root node.
+What is graph coloring?	Assigning colors to vertices so no two adjacent vertices share the same color. The chromatic number χ(G) is the minimum colors needed. Application: scheduling, register allocation.
+What is a Hamiltonian path vs an Eulerian path?	Eulerian path: visits every edge exactly once. Eulerian circuit exists iff all vertices have even degree.<br>Hamiltonian path: visits every vertex exactly once. NP-complete to determine in general.
+What is modular arithmetic?	Arithmetic with a modulus n where numbers "wrap around." a ≡ b (mod n) means n divides (a − b). Used in cryptography, hashing, and number theory.
+What is the Euclidean algorithm?	An efficient method to compute GCD(a, b): GCD(a, b) = GCD(b, a mod b), with base case GCD(a, 0) = a. Runs in O(log min(a,b)) time.
+What is proof by induction?	A proof technique with two steps:<br>1. Base case: prove the statement holds for n = 0 (or 1).<br>2. Inductive step: assume it holds for n = k (inductive hypothesis) and prove it holds for n = k+1.

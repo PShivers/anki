@@ -1,0 +1,20 @@
+What is idempotency?	An operation is idempotent if applying it multiple times has the same effect as applying it once. Example: HTTP GET and PUT are idempotent; POST is not.
+What is immutability?	An object whose state cannot be changed after creation. Immutable data is inherently thread-safe and easier to reason about. Examples: Python strings, tuples, Java String.
+What is referential transparency?	A property of an expression where it can be replaced by its value without changing the program's behavior. Core to functional programming and enables safe memoization.
+What is a side effect?	Any observable change to state outside a function's local scope — writing to a file, modifying a global variable, network call. Pure functions have no side effects.
+What is encapsulation?	Bundling data and the methods that operate on it into a single unit (class), and restricting direct access to internal state via access modifiers (private, protected).
+What is polymorphism?	The ability of different types to be treated as instances of a common interface. Subtype polymorphism: a subclass object used where the parent type is expected. Ad-hoc: function overloading.
+What is abstraction?	Hiding complex implementation details and exposing only the necessary interface. Lets users interact with a system without knowing its internal workings.
+What is coupling?	The degree of interdependence between modules. Loose coupling is desirable — changes in one module minimally affect others. Tight coupling makes systems fragile and hard to test.
+What is cohesion?	How closely related and focused the responsibilities of a module are. High cohesion is desirable — each module does one thing well. Low cohesion leads to hard-to-maintain "god objects."
+What does DRY stand for?	Don't Repeat Yourself — every piece of knowledge should have a single, unambiguous, authoritative representation. Duplication makes code harder to maintain and causes inconsistency.
+What does SOLID stand for?	Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion. Five object-oriented design principles for maintainable, extensible code.
+What is the Single Responsibility Principle?	A class should have only one reason to change — it should have one job. Keeps classes focused and easier to test and maintain.
+What is the Open/Closed Principle?	Software entities should be open for extension but closed for modification. Add new behavior by extending (subclassing, composition) rather than modifying existing code.
+What is the Liskov Substitution Principle?	Subtypes must be substitutable for their base types without altering program correctness. If S is a subtype of T, code using T should work with S without knowing the difference.
+What is the Dependency Inversion Principle?	High-level modules should not depend on low-level modules; both should depend on abstractions. Enables dependency injection and makes code easier to test.
+What is dependency injection?	Providing a class's dependencies from the outside rather than having the class create them internally. Improves testability (can inject mocks) and decouples components.
+What is memoization?	Caching the result of a function call for a given set of inputs so the same computation isn't repeated. Trades memory for speed. Python: @functools.lru_cache.
+What is the difference between concurrency and parallelism?	Concurrency: managing multiple tasks that overlap in time (may interleave on one CPU).<br>Parallelism: executing multiple tasks simultaneously on multiple CPUs/cores.
+What is eventual consistency?	A consistency model in distributed systems where all replicas will converge to the same value given sufficient time and no new updates. Trades immediate consistency for availability.
+What is technical debt?	The implied cost of future rework caused by choosing a quick/easy solution now instead of a better approach. Accumulates interest — small shortcuts become expensive to fix later.

@@ -1,0 +1,20 @@
+What is Big O notation?	A mathematical notation describing the upper bound of an algorithm's time or space growth as input size n increases, ignoring constants and lower-order terms.
+What is O(1)?	Constant time — the operation takes the same time regardless of input size. Examples: array index access, hash table lookup (average case), push/pop on a stack.
+What is O(log n)?	Logarithmic time — the algorithm halves the search space each step. Examples: binary search, balanced BST operations, heap insert/extract.
+What is O(n)?	Linear time — time grows proportionally with input size. Examples: linear search, traversing a linked list, counting elements in an array.
+What is O(n log n)?	Log-linear time — common in efficient sorting algorithms. Examples: merge sort, heap sort, quick sort (average case).
+What is O(n²)?	Quadratic time — often from nested loops over the input. Examples: bubble sort, insertion sort, selection sort, comparing all pairs.
+What is O(2ⁿ)?	Exponential time — doubles with each additional input element. Examples: recursive Fibonacci (naive), generating all subsets (power set).
+What is O(n!)?	Factorial time — grows extremely fast. Examples: generating all permutations of n elements, brute-force traveling salesman.
+What is the difference between time complexity and space complexity?	Time complexity: how runtime scales with input size.<br>Space complexity: how memory usage scales with input size. Both use Big O notation.
+What is amortized time complexity?	The average time per operation over a sequence of operations, even if some operations are occasionally expensive. Example: dynamic array append is O(1) amortized despite O(n) resize.
+What are the Big O complexities of common sorting algorithms?	Bubble/Selection/Insertion: O(n²) worst.<br>Merge Sort: O(n log n) always.<br>Quick Sort: O(n log n) avg, O(n²) worst.<br>Heap Sort: O(n log n) always.<br>Counting/Radix: O(n+k) for bounded integers.
+What is the time complexity of binary search?	O(log n) — each comparison eliminates half the remaining elements. Requires a sorted input.
+What are the average-case complexities of hash table operations?	Insert: O(1), Search: O(1), Delete: O(1). Worst case is O(n) when all keys hash to the same bucket.
+What is the time complexity of BFS and DFS on a graph?	Both O(V + E) where V = vertices and E = edges — each vertex and edge is visited at most once.
+What is the space complexity of recursive DFS vs BFS?	Recursive DFS: O(h) where h is the recursion depth (tree height).<br>BFS: O(w) where w is the maximum width of the graph (queue size).
+What is the time complexity of common heap operations?	Insert: O(log n), Extract-min/max: O(log n), Peek min/max: O(1), Build heap from array: O(n).
+What are the complexities of Dijkstra's algorithm?	With a binary heap: O((V + E) log V).<br>With a Fibonacci heap: O(E + V log V). For dense graphs (E ≈ V²), the simpler O(V²) matrix version can be competitive.
+What is the complexity of matrix multiplication?	Naive: O(n³) for n×n matrices. Strassen's algorithm: O(n^2.807). Used in practice for large matrices.
+What is the difference between best, average, and worst case complexity?	Best case (Ω): minimum operations for any input of size n.<br>Average case (Θ): expected operations across all inputs.<br>Worst case (O): maximum operations for any input — most commonly used for guarantees.
+What is the Master Theorem used for?	Solving recurrences of the form T(n) = aT(n/b) + f(n), common in divide-and-conquer algorithms. Provides O, Θ, or Ω bounds based on comparing f(n) to n^(log_b a).

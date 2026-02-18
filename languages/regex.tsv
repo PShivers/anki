@@ -1,0 +1,20 @@
+What does . match in regex?	Any single character except a newline (by default). Use re.DOTALL flag to include newlines.
+What is the difference between * and + quantifiers?	*: match 0 or more of the preceding element.<br>+: match 1 or more. So a* matches empty string; a+ requires at least one 'a'.
+What does ? do in regex?	Makes the preceding element optional (0 or 1 occurrence). Also used to make quantifiers lazy when placed after *, +, or {n,m}.
+What is the difference between greedy and lazy matching?	Greedy (default): quantifiers match as much as possible.<br>Lazy: add ? after a quantifier (e.g., *?) to match as little as possible.
+What do ^ and $ anchor?	^: matches the start of the string (or line in multiline mode).<br>$: matches the end of the string (or line in multiline mode).
+What is a character class []?	Matches any single character listed inside the brackets. [aeiou] matches any vowel. [a-z] matches any lowercase letter. [^abc] matches any character NOT in the set.
+What are common shorthand character classes?	\d: digit [0-9]<br>\w: word character [a-zA-Z0-9_]<br>\s: whitespace [ \t\n\r\f\v]<br>\D, \W, \S: their negations.
+What is a capturing group ()?	Parentheses group part of a pattern and capture the matched text. The captured value can be referenced via group(n) or in a replacement string as \1.
+What is a non-capturing group (?:)?	Groups a pattern without capturing the matched text. Useful for applying quantifiers to a group when you don't need to reference the match later.
+What is a lookahead?	(?=pattern): positive lookahead — matches a position followed by pattern, without consuming it.<br>(?!pattern): negative lookahead — matches if NOT followed by pattern.
+What is a lookbehind?	(?<=pattern): positive lookbehind — matches a position preceded by pattern.<br>(?<!pattern): negative lookbehind — matches if NOT preceded by pattern.
+What does | do in regex?	Alternation — matches either the expression on the left or the right. (cat|dog) matches "cat" or "dog".
+What is \b in regex?	A word boundary — matches the position between a word character (\w) and a non-word character. Useful to match whole words: \bword\b.
+What does {n,m} quantifier mean?	Matches between n and m repetitions of the preceding element. {3} exactly 3, {3,} at least 3, {3,6} between 3 and 6.
+What is a backreference?	\1 (or \2, etc.) refers to the text captured by the nth capturing group earlier in the pattern. Example: (\w+) \1 matches repeated words like "hello hello".
+What is re.compile() used for?	Pre-compiles a regex pattern into a reusable object. More efficient when using the same pattern multiple times, as it avoids recompiling on each use.
+What is the difference between re.match and re.search?	re.match: only checks for a match at the beginning of the string.<br>re.search: scans the entire string for the first location where the pattern matches.
+What does re.findall return?	A list of all non-overlapping matches of the pattern in the string. If there are capturing groups, returns a list of tuples of the captured groups.
+What does re.sub do?	Replaces all matches of a pattern in a string with a replacement string or function. re.sub(r'\d+', 'NUM', 'abc 123') → 'abc NUM'.
+What are common regex flags?	re.IGNORECASE (re.I): case-insensitive.<br>re.MULTILINE (re.M): ^ and $ match line boundaries.<br>re.DOTALL (re.S): . matches newline.<br>re.VERBOSE (re.X): allow whitespace and comments in pattern.

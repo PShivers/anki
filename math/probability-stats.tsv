@@ -1,0 +1,20 @@
+What is probability?	A measure of the likelihood of an event, between 0 (impossible) and 1 (certain). P(A) = (favorable outcomes) / (total outcomes) for equally likely outcomes.
+What is the complement rule?	P(Aᶜ) = 1 − P(A). The probability of an event NOT occurring equals one minus the probability it does occur.
+What is conditional probability?	P(A|B) = P(A ∩ B) / P(B). The probability of A given that B has already occurred.
+What are independent events?	Events A and B are independent if P(A ∩ B) = P(A) × P(B), i.e., knowing B occurred doesn't change the probability of A.
+What is Bayes' theorem?	P(A|B) = P(B|A) × P(A) / P(B). Allows updating the probability of A given new evidence B. Foundation of Bayesian inference.
+What is the law of total probability?	If B₁, ..., Bₙ partition the sample space, then P(A) = Σ P(A|Bᵢ) × P(Bᵢ). Used to compute marginal probabilities from conditional ones.
+What is expected value (mean)?	E[X] = Σ x × P(X=x) for discrete distributions. The long-run average value of a random variable. For continuous: E[X] = ∫ x f(x) dx.
+What is variance?	Var(X) = E[(X − μ)²] = E[X²] − (E[X])². Measures the spread of a distribution around its mean.
+What is standard deviation?	σ = √Var(X). Same units as the random variable. Measures average distance from the mean.
+What is a probability distribution?	A function describing the likelihood of each possible value of a random variable. Discrete distributions: PMF. Continuous distributions: PDF.
+What is the normal (Gaussian) distribution?	A symmetric, bell-shaped continuous distribution defined by mean μ and standard deviation σ. 68% of data within 1σ, 95% within 2σ, 99.7% within 3σ (empirical rule).
+What is the central limit theorem?	The sum (or mean) of a large number of independent, identically distributed random variables approaches a normal distribution regardless of the original distribution.
+What is the binomial distribution?	Models the number of successes in n independent Bernoulli trials each with probability p. P(X=k) = C(n,k) pᵏ (1−p)ⁿ⁻ᵏ. Mean = np, Variance = np(1−p).
+What is the Poisson distribution?	Models the number of events occurring in a fixed interval when events happen at a constant rate λ independently. P(X=k) = λᵏ e⁻λ / k!. Mean = Variance = λ.
+What is the difference between population and sample?	Population: the entire group of interest. Sample: a subset drawn from the population. Statistics computed on samples (x̄, s) are estimators of population parameters (μ, σ).
+What is sampling bias?	When a sample is not representative of the population, leading to inaccurate conclusions. Examples: voluntary response bias, survivorship bias, selection bias.
+What is a p-value?	The probability of observing results at least as extreme as the data, assuming the null hypothesis is true. Low p-value (< 0.05) suggests evidence against the null hypothesis.
+What is a Type I error vs a Type II error?	Type I (false positive): rejecting a true null hypothesis. Probability = α (significance level).<br>Type II (false negative): failing to reject a false null hypothesis. Probability = β.
+What is correlation?	Pearson correlation coefficient r ∈ [−1, 1] measures the linear relationship between two variables. r=1 perfect positive, r=−1 perfect negative, r=0 no linear relationship.
+What is the difference between correlation and causation?	Correlation means two variables tend to move together. Causation means one causes the other. Correlation does not imply causation — confounding variables can explain a relationship.

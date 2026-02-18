@@ -1,0 +1,20 @@
+What are Python's built-in data types?	int, float, complex, bool, str, bytes, list, tuple, range, dict, set, frozenset, NoneType.
+What is the difference between a list and a tuple?	List: mutable, defined with []. Tuple: immutable, defined with (). Tuples are faster and can be used as dict keys; lists support in-place modification.
+What is the difference between a set and a frozenset?	Set: mutable, unordered collection of unique elements.<br>Frozenset: immutable version — can be used as a dict key or set element.
+What is a list comprehension?	A concise syntax for creating lists: [expr for item in iterable if condition]. Equivalent to a for loop that appends to a list but faster and more readable.
+What is a generator in Python?	A function that yields values one at a time using the yield keyword. Returns a generator object that is lazy — values are produced on demand, saving memory.
+What is the difference between a generator and a list?	A list stores all values in memory at once. A generator computes values on demand (lazy evaluation), making it more memory-efficient for large or infinite sequences.
+What is *args and **kwargs?	*args: collects extra positional arguments into a tuple.<br>**kwargs: collects extra keyword arguments into a dict. Used to write functions that accept a variable number of arguments.
+What is a decorator in Python?	A function that wraps another function to extend its behavior without modifying it. Applied with @syntax. Common uses: logging, timing, authentication, caching (@functools.lru_cache).
+What is the difference between @staticmethod and @classmethod?	@staticmethod: no implicit first argument — just a regular function namespaced in a class.<br>@classmethod: receives cls as the first argument — can access and modify class state.
+What is a context manager and the with statement?	An object that defines __enter__ and __exit__ methods to manage setup and teardown (e.g., file handles, locks). The with statement ensures __exit__ is called even if an exception occurs.
+What is the GIL (Global Interpreter Lock)?	A mutex in CPython that prevents multiple threads from executing Python bytecode simultaneously. Limits true parallelism for CPU-bound threads; use multiprocessing for CPU parallelism.
+What is the difference between deepcopy and shallow copy?	Shallow copy: creates a new object but copies references to nested objects (changes in nested objects affect both).<br>Deep copy: recursively copies all nested objects — fully independent.
+What does if __name__ == "__main__" do?	Checks if the script is being run directly (not imported). Code inside this block runs only when the file is executed as the main program.
+What is a lambda function?	An anonymous, single-expression function: lambda x: x * 2. Useful for short callbacks and functional programming with map/filter/sorted.
+What is the difference between is and == in Python?	== checks value equality.<br>is checks identity (same object in memory). Use == for value comparison; is for None checks (x is None).
+What are Python's built-in higher-order functions?	map(fn, iter): applies fn to each element.<br>filter(fn, iter): keeps elements where fn is truthy.<br>sorted(iter, key=fn): sorts with optional key function.<br>functools.reduce(fn, iter): reduces to a single value.
+What is slicing in Python?	Extracting a subsequence: seq[start:stop:step]. Negative indices count from the end. seq[::-1] reverses a sequence. Works on lists, tuples, and strings.
+What is the difference between append and extend on a list?	append(x): adds x as a single element (even if x is a list).<br>extend(iter): iterates over iter and adds each element individually.
+What is a defaultdict?	A dict subclass from collections that calls a factory function to supply a default value for missing keys, avoiding KeyError. Example: defaultdict(list).
+What is enumerate and when do you use it?	enumerate(iter, start=0) yields (index, value) pairs. Use it when you need both the index and the value in a loop instead of manually tracking a counter.

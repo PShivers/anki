@@ -1,0 +1,20 @@
+What are the three categories of Gang of Four design patterns?	Creational — object creation mechanisms.<br>Structural — how objects are composed.<br>Behavioral — how objects communicate and share responsibility.
+What is the Singleton pattern?	Ensures a class has only one instance and provides a global access point to it. Common uses: logging, config, connection pools. Risk: hides dependencies and complicates testing.
+What is the Factory Method pattern?	Defines an interface for creating an object but lets subclasses decide which class to instantiate. Decouples object creation from the code that uses the object.
+What is the Abstract Factory pattern?	Provides an interface for creating families of related objects without specifying their concrete classes. Used when a system must be independent of how its products are created.
+What is the Builder pattern?	Separates the construction of a complex object from its representation, allowing the same construction process to create different representations. Useful when objects have many optional parameters.
+What is the Prototype pattern?	Creates new objects by cloning an existing object (the prototype) rather than calling a constructor. Useful when object creation is expensive.
+What is the Adapter pattern?	Converts the interface of a class into another interface that clients expect. Allows incompatible interfaces to work together. Also called a wrapper.
+What is the Decorator pattern?	Attaches additional responsibilities to an object dynamically by wrapping it. Provides a flexible alternative to subclassing for extending functionality.
+What is the Facade pattern?	Provides a simplified interface to a complex subsystem. Reduces dependencies between client code and the internals of the subsystem.
+What is the Proxy pattern?	Provides a surrogate or placeholder for another object to control access to it. Uses: lazy initialization, access control, logging, caching, remote access.
+What is the Composite pattern?	Composes objects into tree structures to represent part-whole hierarchies. Lets clients treat individual objects and compositions uniformly (e.g., a file system tree).
+What is the Observer pattern?	Defines a one-to-many dependency between objects so that when one object changes state, all dependents are notified automatically. Foundation of event systems and MVC.
+What is the Strategy pattern?	Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Lets the algorithm vary independently from clients that use it.
+What is the Command pattern?	Encapsulates a request as an object, allowing it to be queued, logged, undone, or redone. Decouples the sender of a request from its receiver.
+What is the Template Method pattern?	Defines the skeleton of an algorithm in a base class, deferring some steps to subclasses. Subclasses override specific steps without changing the algorithm's structure.
+What is the Iterator pattern?	Provides a way to sequentially access elements of a collection without exposing its underlying representation.
+What is the State pattern?	Allows an object to change its behavior when its internal state changes. The object appears to change its class. Replaces large if/switch state machines.
+What is the Chain of Responsibility pattern?	Passes a request along a chain of handlers. Each handler decides to process it or pass it to the next handler. Used in middleware pipelines and event bubbling.
+What is the difference between composition and inheritance in design patterns?	Inheritance: reuse via "is-a" relationship — static, tight coupling.<br>Composition: reuse via "has-a" relationship — dynamic, flexible. Gang of Four advice: "favor composition over inheritance."
+What is the Flyweight pattern?	Shares common state between many fine-grained objects to reduce memory usage. Intrinsic state (shared) is stored in the flyweight; extrinsic state (unique) is passed in by the client.

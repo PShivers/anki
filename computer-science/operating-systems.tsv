@@ -1,0 +1,20 @@
+What is a process?	An independent program in execution with its own memory space, file handles, and system resources. Managed by the OS scheduler.
+What is a thread?	The smallest unit of execution within a process. Threads share the same memory and resources of their parent process but run independently.
+What is the difference between a process and a thread?	Processes are isolated with separate memory spaces; threads share memory within a process. Thread creation and context switching are cheaper than processes.
+What is a context switch?	The OS saving the state of one process/thread and restoring the state of another so the CPU can switch between tasks.
+What is a scheduler?	The OS component that decides which process/thread runs on the CPU and for how long. Common algorithms: FIFO, Round Robin, Priority Scheduling, MLFQ.
+What is the difference between preemptive and non-preemptive scheduling?	Preemptive: OS can interrupt a running process and switch to another.<br>Non-preemptive: a process runs until it voluntarily yields or blocks.
+What is a deadlock?	A state where two or more processes are each waiting for a resource held by the other, so none can proceed. Requires: mutual exclusion, hold-and-wait, no preemption, circular wait.
+What are the four Coffman conditions for deadlock?	1. Mutual exclusion — resources are non-shareable<br>2. Hold and wait — processes hold resources while waiting for more<br>3. No preemption — resources can't be forcibly taken<br>4. Circular wait — a cycle of processes each waiting on the next
+What is a mutex?	A mutual exclusion lock that ensures only one thread can access a critical section at a time. Must be unlocked by the thread that locked it.
+What is a semaphore?	A synchronization primitive with a counter. Binary semaphore (0/1) acts like a mutex; counting semaphore controls access to a pool of N resources.
+What is a race condition?	When the outcome of a program depends on the non-deterministic ordering of operations by concurrent threads, leading to unpredictable bugs.
+What is virtual memory?	An abstraction that gives each process the illusion of a large, private address space. Pages are mapped to physical RAM or swapped to disk as needed.
+What is paging?	Dividing virtual memory into fixed-size pages and physical memory into frames. The OS maps pages to frames via a page table, enabling non-contiguous physical storage.
+What is a page fault?	Occurs when a process accesses a page not currently in physical RAM. The OS loads the page from disk (swap) into a free frame and resumes execution.
+What is thrashing?	When the OS spends more time swapping pages in and out than executing processes, usually due to insufficient physical RAM for the working set of active processes.
+What is the difference between internal and external fragmentation?	Internal: wasted space inside an allocated block (block is larger than needed).<br>External: enough total free space exists but it's split into non-contiguous chunks that can't satisfy a request.
+What is a system call?	An interface through which a user-space program requests a service from the OS kernel (e.g., file I/O, process creation, network access). Crosses the user/kernel boundary.
+What is the difference between user mode and kernel mode?	Kernel mode: full hardware access, runs OS code.<br>User mode: restricted access, runs application code. A system call switches from user to kernel mode.
+What is an interrupt?	A signal to the CPU from hardware or software indicating an event needs immediate attention. The CPU suspends current execution, runs the interrupt handler, then resumes.
+What is the difference between a monolithic kernel and a microkernel?	Monolithic: entire OS runs in kernel space — fast but less modular (Linux).<br>Microkernel: minimal kernel; most services run in user space — more modular but slower due to IPC overhead.
