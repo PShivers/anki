@@ -5,7 +5,7 @@ Install: pip install genanki
 Usage:   python generate_deck.py                                        (reads computer-science/data-structures.tsv)
          python generate_deck.py computer-science/data-structures.tsv   (same, explicit)
          python generate_deck.py my_cards.tsv "My Deck Name"            (custom file and deck name)
-Output:  <deck-name>.apkg (double-click to import into Anki)
+Output:  decks/<deck-name>.apkg (double-click to import into Anki)
 
 Card format in TSV: one card per line, front and back separated by a tab.
 """
@@ -65,6 +65,7 @@ with open(tsv_file, newline="", encoding="utf-8") as f:
             deck.add_note(note)
             count += 1
 
-output_file = f"{deck_name.lower().replace(' ', '_')}.apkg"
+os.makedirs("decks", exist_ok=True)
+output_file = os.path.join("decks", f"{deck_name.lower().replace(' ', '_')}.apkg")
 genanki.Package(deck).write_to_file(output_file)
 print(f"Created {output_file} with {count} cards from {tsv_file}")
