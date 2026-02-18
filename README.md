@@ -5,7 +5,9 @@ Generate Anki flashcard decks (`.apkg`) from simple TSV files.
 ## Setup
 
 ```bash
-pip install genanki
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## Usage
