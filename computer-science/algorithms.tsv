@@ -1,0 +1,20 @@
+What is Big O notation?	A mathematical notation describing the upper bound of an algorithm's growth rate as input size increases. Focuses on the dominant term, ignoring constants.
+What is the difference between Big O, Big Omega, and Big Theta?	Big O: upper bound (worst case)<br>Big Omega (Ω): lower bound (best case)<br>Big Theta (Θ): tight bound (average case, when O and Ω match)
+What is bubble sort?	Repeatedly swaps adjacent elements if they are in the wrong order. Time: O(n²) average/worst, O(n) best. Space: O(1). Stable.
+What is selection sort?	Finds the minimum element and places it at the beginning, repeating for each position. Time: O(n²) all cases. Space: O(1). Not stable.
+What is insertion sort?	Builds the sorted array one element at a time by inserting each into its correct position. Time: O(n²) average/worst, O(n) best. Space: O(1). Stable. Efficient for small or nearly sorted data.
+What is merge sort?	A divide-and-conquer algorithm that splits the array in half, recursively sorts each half, then merges them. Time: O(n log n) all cases. Space: O(n). Stable.
+What is quicksort?	A divide-and-conquer algorithm that picks a pivot, partitions elements around it, then recursively sorts each partition. Time: O(n log n) average, O(n²) worst. Space: O(log n). Not stable.
+What is the difference between merge sort and quicksort?	Merge sort: guaranteed O(n log n), stable, uses O(n) extra space.<br>Quicksort: O(n log n) average but O(n²) worst, not stable, in-place with O(log n) space. Typically faster in practice due to cache locality.
+What is a divide-and-conquer algorithm?	A strategy that breaks a problem into smaller subproblems, solves each recursively, then combines results. Examples: merge sort, quicksort, binary search.
+What is binary search?	Searches a sorted array by repeatedly halving the search space. Compares the target to the middle element and eliminates one half. Time: O(log n). Requires sorted input.
+What is breadth-first search (BFS)?	Explores a graph level by level using a queue. Finds shortest path in unweighted graphs. Time: O(V + E). Space: O(V).
+What is depth-first search (DFS)?	Explores a graph by going as deep as possible along each branch before backtracking. Uses a stack (or recursion). Time: O(V + E). Space: O(V).
+When would you use BFS vs DFS?	BFS: shortest path in unweighted graphs, level-order traversal.<br>DFS: topological sorting, cycle detection, maze solving, when solutions are far from the root.
+What is Dijkstra's algorithm?	Finds the shortest path from a source to all other vertices in a weighted graph with non-negative edges. Uses a priority queue. Time: O((V + E) log V) with a min-heap.
+What is dynamic programming?	A technique for solving problems by breaking them into overlapping subproblems and storing results to avoid recomputation. Two approaches: top-down (memoization) and bottom-up (tabulation).
+What is memoization?	A top-down dynamic programming technique that caches the results of function calls so repeated calls with the same arguments return the cached result instead of recomputing.
+What is a greedy algorithm?	An algorithm that makes the locally optimal choice at each step, hoping to find a global optimum. Works for problems with greedy-choice property and optimal substructure (e.g., Huffman coding, Kruskal's MST).
+What is the difference between dynamic programming and greedy algorithms?	DP explores all subproblems and guarantees an optimal solution.<br>Greedy makes one best choice at each step — faster but only works when local optima lead to a global optimum.
+What is a topological sort?	A linear ordering of vertices in a directed acyclic graph (DAG) such that for every edge u → v, u comes before v. Used for task scheduling and dependency resolution. Time: O(V + E).
+What is the time complexity of common sorting algorithms?	Bubble/Selection/Insertion: O(n²)<br>Merge sort: O(n log n)<br>Quicksort: O(n log n) avg, O(n²) worst<br>Heap sort: O(n log n)<br>Counting/Radix sort: O(n + k) where k is the range

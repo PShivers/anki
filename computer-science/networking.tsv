@@ -1,0 +1,20 @@
+What are the layers of the OSI model?	7. Application<br>6. Presentation<br>5. Session<br>4. Transport<br>3. Network<br>2. Data Link<br>1. Physical
+What are the layers of the TCP/IP model?	4. Application (HTTP, DNS, SMTP)<br>3. Transport (TCP, UDP)<br>2. Internet (IP, ICMP)<br>1. Network Access (Ethernet, Wi-Fi)
+What is the difference between TCP and UDP?	TCP: connection-oriented, reliable, ordered delivery, flow control, slower.<br>UDP: connectionless, unreliable, no ordering guarantee, no flow control, faster. Used for streaming, DNS, gaming.
+What is the TCP three-way handshake?	1. Client sends SYN<br>2. Server responds with SYN-ACK<br>3. Client sends ACK<br>Connection is now established.
+What is an IP address?	A numerical label assigned to each device on a network. IPv4: 32-bit (e.g., 192.168.1.1). IPv6: 128-bit (e.g., 2001:0db8::1). Used for routing packets to their destination.
+What is the difference between IPv4 and IPv6?	IPv4: 32-bit, ~4.3 billion addresses, dotted decimal notation.<br>IPv6: 128-bit, ~3.4 × 10³⁸ addresses, hex colon notation. IPv6 also has built-in IPsec and no need for NAT.
+What is DNS?	Domain Name System — translates human-readable domain names (google.com) into IP addresses. Uses a hierarchical system of nameservers (root → TLD → authoritative).
+What is HTTP?	HyperText Transfer Protocol — an application-layer protocol for transferring web resources. Stateless, request-response model. Methods: GET, POST, PUT, DELETE, PATCH, etc.
+What is the difference between HTTP and HTTPS?	HTTPS adds TLS/SSL encryption on top of HTTP. Encrypts data in transit, verifies server identity via certificates, and prevents tampering. Uses port 443 instead of 80.
+What is a port number?	A 16-bit number (0–65535) identifying a specific process or service on a host. Well-known ports: 80 (HTTP), 443 (HTTPS), 22 (SSH), 53 (DNS), 25 (SMTP).
+What is a subnet?	A logical subdivision of an IP network. Defined by a subnet mask (e.g., 255.255.255.0 or /24) that splits the IP into network and host portions.
+What is NAT?	Network Address Translation — maps private IP addresses to a single public IP for outbound traffic. Allows multiple devices to share one public IP. Common in home routers.
+What is a MAC address?	A 48-bit hardware address assigned to a network interface card (NIC). Used at the data link layer (Layer 2) for local network communication. Format: AA:BB:CC:DD:EE:FF.
+What is ARP?	Address Resolution Protocol — resolves IP addresses to MAC addresses on a local network. A device broadcasts "Who has this IP?" and the owner responds with its MAC address.
+What is the difference between a switch and a router?	Switch: operates at Layer 2, forwards frames based on MAC addresses within a LAN.<br>Router: operates at Layer 3, forwards packets between networks based on IP addresses.
+What is a firewall?	A network security device that monitors and filters incoming and outgoing traffic based on predefined rules. Can be hardware or software. Operates at various OSI layers.
+What is a VLAN?	Virtual Local Area Network — logically segments a physical network into separate broadcast domains. Devices in different VLANs can't communicate without a router, even if on the same switch.
+What is TLS/SSL?	Transport Layer Security (successor to SSL) — a cryptographic protocol that provides encrypted communication over a network. Uses certificates, key exchange, and symmetric encryption.
+What is a load balancer?	A device or service that distributes incoming network traffic across multiple servers to ensure availability and reliability. Algorithms: round-robin, least connections, IP hash.
+What is latency vs throughput?	Latency: time for a packet to travel from source to destination (measured in ms).<br>Throughput: amount of data transferred per unit time (measured in Mbps). Low latency ≠ high throughput.

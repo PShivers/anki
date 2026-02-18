@@ -1,0 +1,20 @@
+What is an array?	A contiguous block of memory storing elements of the same type, accessed by index in O(1) time.
+What is a linked list?	A sequence of nodes where each node stores data and a pointer to the next node. Allows O(1) insertion/deletion at known positions but O(n) access by index.
+What is the difference between a singly and doubly linked list?	Singly: each node points to the next node only.<br>Doubly: each node points to both the next and previous nodes, enabling traversal in both directions.
+What is a stack?	A LIFO (Last In, First Out) data structure. Elements are added and removed from the same end (the top). Key operations: push, pop, peek.
+What is a queue?	A FIFO (First In, First Out) data structure. Elements are added at the back and removed from the front. Key operations: enqueue, dequeue, peek.
+What is a deque?	A double-ended queue that supports insertion and removal at both ends in O(1) time.
+What is a hash table?	A data structure that maps keys to values using a hash function. Provides O(1) average-case lookup, insertion, and deletion.
+What is a hash collision and how is it handled?	When two keys hash to the same index. Common solutions:<br>- Chaining: store collisions in a linked list at that index<br>- Open addressing: probe for the next available slot (linear, quadratic, or double hashing)
+What is a binary tree?	A tree where each node has at most two children (left and right).
+What is a binary search tree (BST)?	A binary tree where for every node, all values in the left subtree are less and all values in the right subtree are greater. Provides O(log n) average-case search, insert, and delete.
+What is a balanced binary tree?	A binary tree where the height difference between left and right subtrees of any node is at most 1. Guarantees O(log n) operations. Examples: AVL trees, red-black trees.
+What is a heap?	A complete binary tree satisfying the heap property:<br>- Min-heap: parent ≤ children<br>- Max-heap: parent ≥ children<br>Supports O(1) find-min/max and O(log n) insert/extract.
+What is a priority queue?	An abstract data type where each element has a priority. The highest-priority element is dequeued first. Typically implemented with a heap.
+What is a trie?	A tree-like structure for storing strings where each node represents a character. Enables O(m) lookup where m is the string length. Used for autocomplete and spell checking.
+What is a graph?	A collection of vertices (nodes) connected by edges. Can be directed or undirected, weighted or unweighted.
+What is the difference between an adjacency matrix and an adjacency list?	Adjacency matrix: 2D array, O(1) edge lookup, O(V²) space.<br>Adjacency list: array of lists, O(degree) edge lookup, O(V + E) space. Better for sparse graphs.
+What is a B-tree?	A self-balancing search tree where nodes can have more than two children. Optimized for systems that read/write large blocks of data (databases, filesystems). All leaves are at the same depth.
+What is the time complexity of common array operations?	Access: O(1)<br>Search: O(n)<br>Insert at end: O(1) amortized<br>Insert at position: O(n)<br>Delete: O(n)
+What is the time complexity of common hash table operations?	Average case — Insert: O(1), Search: O(1), Delete: O(1)<br>Worst case (all collisions): O(n) for all operations.
+What is the difference between a tree and a graph?	A tree is a connected, acyclic graph with exactly N-1 edges for N nodes. Every tree is a graph, but not every graph is a tree.
